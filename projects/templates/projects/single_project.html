@@ -1,6 +1,11 @@
 {% extends "base.html "%}
 {% load static %}
 
+{% block head_scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.min.js"></script>
+{% endblock %}
+
 {% block styles%}
     <link rel="stylesheet" href="{% static "projects/projects.css" %}">
     <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
@@ -35,3 +40,9 @@
         <h2>All Projects</h2>
     </section>
 {% endblock %}
+
+
+{% block body_scripts%}
+{% endblock %}
+
+
