@@ -1,0 +1,30 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static "home/home.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
+{% endblock %}
+
+{% block page_title %}
+{% endblock%}
+
+{% block header %}
+    {% include "my_site/includes/header.html"%}
+{% endblock%}
+
+{% block content %}  
+    <h1>About</h1>
+    <section id="welcome">
+        <header>
+            <img src="" alt="">
+            <h2>Our Story</h2>
+        </header> 
+        <p class="page-copy"> Xuzmonomi was founded on the belief that technology and art can coexist harmoniously.</p> 
+        <p class="page-copy">   
+            With a passion for creative coding, I aim to push the boundaries of what's possible in the digital realm. 
+            I am a one man team purely dedicated to crafting experiences that are marriage of efficiency and elegance in artistic celebration.
+        </p>
+    </section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static "services/services.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
+{% endblock %}
+
+{% block page_title %}
+{% endblock%}
+
+{% block header %}
+    {% include "my_site/includes/header.html"%}
+{% endblock%}
+
+{% block content %}  
+    <h1>Services</h1>
+    <section id="welcome">
+        <header>
+            <img src="" alt="">
+            <h2>What We Offer</h2>
+        </header>
+        <p class="page-copy">
+            Looking for a is specialist software developmer, machine learning engineer, 
+            and code art services provider?
+        </p> 
+        <p class="page-copy">  
+            Xuzmonomi is exactly that! I highly value optimal functionality and aesthetic appeal, 
+            ensuring that the unique needs of each client are satisfied.
+            Whether you're looking for a custom application or an engaging digital art piece, 
+            these services are designed to deliver to you the most exceptional results.   
+        </p>
+    </section>
+{% endblock %}

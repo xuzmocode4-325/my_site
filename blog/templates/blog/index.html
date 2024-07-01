@@ -1,0 +1,45 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static "blog/blog.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "blog/includes/post.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
+{% endblock %}
+
+{% block page_title %}
+{% endblock%}
+
+{% block header %}
+    {% include "my_site/includes/header.html"%}
+{% endblock%}
+
+{% block content %} 
+    <h1 class="box">Blog</h1>
+    <div class="container">     
+        <section class="box" id="welcome">
+            <header>
+                <img src="" alt="">
+                <h2>Insights and Innovations</h2>
+            </header>
+            <p class="page-copy">Dive into the latest trends and breakthroughs in creative coding.</p> 
+            <p class="page-copy">  
+                I blog about everything from programming techniques to artistic expression, 
+                offering a unique perspective on the evolving landscape of digital art and technology. 
+                Subscribe to my feed to stay informed and inspired.         
+            </p>
+        </section>
+        <section class="box" id="all-posts">
+            <h2>Top Posts</h2>
+            <ul>
+               {% for post in posts %}
+                    {% include "my_site/includes/post-article.html" %}
+               {% endfor %}
+            </ul>
+            <a href="{% url "all-posts" %}">
+                <h3>See More Posts</h3>
+            </a>    
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static "home/home.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "home/includes/post.css"%}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
+{% endblock %}
+
+{% block page_title %}
+{% endblock%}
+
+{% block header %}
+    {% include "my_site/includes/header.html"%}
+{% endblock%}
+
+{% block content %} 
+    <h1>Home</h1>
+    <div class="container">    
+        <section class="box" id="welcome">
+            <header>
+                <img src="" alt="">
+                <h2>Welcome to Xuzmonomi</h2>
+            </header>
+            <p class="page-copy">At Xuzmonomi, I blend the worlds of technology and art to create unique 
+                interactive digital experiences.</p> 
+            <p class="page-copy"> 
+                My expertise in software development, 
+                machine learning, and creative coding ensures each project is both functional 
+                and visually stunning. Explore how your ideas can be transformed into digital masterpieces today.
+            </p>
+        </section>
+        <h2>Latest Posts</h2>
+        <section class="box" id="latest-posts">
+            
+            <ul>  
+                {% for post in posts %}
+                    {% include "my_site/includes/post-article.html" %}
+                {% endfor %}
+            </ul>
+        </section>
+        <h2>Latest Projects</h2>
+        <section class="box" id="latest-projects">
+        </section>
+    </div>
+{% endblock %}

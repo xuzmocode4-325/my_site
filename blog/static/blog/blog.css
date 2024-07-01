@@ -1,0 +1,64 @@
+h1, h2 {
+    font-weight: bold; 
+    text-align: center;
+}
+ 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.fallback {
+    text-align: center;
+}
+
+p {
+  max-width: 60rem;
+  margin: 2rem auto; 
+}
+
+#all-posts {
+    margin: 7rem auto;
+    width: 90%;
+    max-width: 60rem;
+}
+  
+#all-posts h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+#all-posts a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+#all-posts a:hover {
+  color: #884488;
+  transform: scale(1.1)
+}
+  
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.post img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.post a {
+  transform-origin: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  background-color: #1f1f1f;
+}

@@ -1,0 +1,31 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static "home/home.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
+{% endblock %}
+
+{% block page_title %}
+{% endblock%}
+
+{% block header %}
+    {% include "my_site/includes/header.html"%}
+{% endblock%}
+
+{% block content %}  
+    <h1>Contact</h1>
+    <section id="welcome">
+        <header>
+            <img src="" alt="">
+            <h2>Get in Touch</h2>
+        </header> 
+        <p class="page-copy">I'd love to hear from you!</p>
+        <p class="page-copy"> 
+            Whether you have a project in mind or just want to learn more about what we do, 
+            feel free to reach out. Connect with me to start that conversation.
+            Let Xuzmonomi bring your vision to life.
+        </p>    
+    </section>
+{% endblock %}

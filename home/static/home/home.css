@@ -1,0 +1,40 @@
+h1, h2 {
+    font-weight: bold; 
+    text-align: center;
+}
+ 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.fallback {
+    text-align: center;
+}
+
+#latest-posts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 60rem;
+    margin: 3rem auto 2rem auto;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+  
+#latest-posts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+  
+#latest-posts li {
+    flex: 1;
+}
