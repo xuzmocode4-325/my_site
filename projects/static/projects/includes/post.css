@@ -1,0 +1,43 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post a {
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.25s ease;
+    padding: 1rem
+}
+
+.post a:hover, 
+.post a:active {
+    transform: scale(1.05);
+    color: #884488;
+}
+
+.post img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 10px; 
+    border: 1px solid #ccc;
+}
+
+.post h3 {
+    margin: 0.25rem 0 
+}
+
+.post time {
+    color: #404040;
+    margin: 0.25rem;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.post:hover time, 
+.post:active time {
+    color: #ccc
+}

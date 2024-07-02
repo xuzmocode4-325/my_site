@@ -4,6 +4,7 @@
 {% block styles%}
     <link rel="stylesheet" href="{% static "projects/projects.css" %}">
     <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "projects/includes/post.css" %}">
     <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
 {% endblock %}
 
@@ -19,7 +20,7 @@
     <section id="welcome">
         <header>
             <img src="" alt="">
-            <h2>Our Creative Portfolio</h2>
+            <h2>My Creative Portfolio</h2>
         </header>
         <p class="page-copy">Explore my diverse range of projects that showcase a fusion between creativity, culture and technology.</p> 
         <p class="page-copy"> 
@@ -28,10 +29,24 @@
             Each project is a testament to my commitment to excellence and artistic integrity.
         </p>
     </section>
+    <h2>Featured Project</h2>
     <section id="featured-project">
-        <h2>Featured Project</h2>
+        <ul>     
+            {% for project in latest %}
+                {% include "my_site/includes/project-article.html" %}
+            {% endfor %}
+        </ul>
     </section>
-    <section id="all-projects">
-        <h2>All Projects</h2>
+    <h2>All Projects</h2>
+    <section id="all-projects"> 
+        <ul>
+            {% for project in projects %}
+                 {% include "my_site/includes/project-article.html" %}
+            {% endfor %}
+        </ul>
+        <a href="{% url "projects-gallery-page" %}">
+            <h3>See More Posts</h3>
+        </a> 
     </section>
+    
 {% endblock %}

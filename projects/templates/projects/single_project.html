@@ -7,42 +7,41 @@
 {% endblock %}
 
 {% block styles%}
-    <link rel="stylesheet" href="{% static "projects/projects.css" %}">
+    <link rel="stylesheet" href="{% static "project/projects.css" %}">
     <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "projects/single-project.css" %}">
     <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
 {% endblock %}
 
 {% block page_title %}
+    {{ project.title }}
 {% endblock%}
 
 {% block header %}
     {% include "my_site/includes/header.html"%}
 {% endblock%}
 
-{% block content %}  
-    <h1>Projects</h1>
-    <section id="welcome">
-        <header>
-            <img src="" alt="">
-            <h2>Our Creative Portfolio</h2>
-        </header>
-        <p class="page-copy">Explore my diverse range of projects that showcase a fusion between creativity, culture and technology.</p> 
-        <p class="page-copy"> 
-            From interactive installations to innovative software solutions, 
-            my portfolio highlights the versatility and impact of creative coding. 
-            Each project is a testament to my commitment to excellence and artistic integrity.
-        </p>
+{% block content %}
+    <section id="summary">
+        <h2> {{ project.title }} </h2>
+        <article>
+            <img 
+                src=""
+                alt=""
+            />
+            <address>{{ project.author}}<address>
+            <div>
+                Last Updated: <time> {{ project.date }} </time>
+            </div>
+        </article>
     </section>
-    <section id="featured-project">
-        <h2>Featured Project</h2>
-    </section>
-    <section id="all-projects">
-        <h2>All Projects</h2>
-    </section>
+    <main>
+        {{ project.content | linebreaks }}
+    </main>
 {% endblock %}
 
-
 {% block body_scripts%}
+    {{ project.script }}
 {% endblock %}
 
 

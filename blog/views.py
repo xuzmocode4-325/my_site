@@ -134,6 +134,6 @@ def posts(request):
 
 def single_post(request, slug):
     post = next(post for post in articles if post["slug"] == slug)
-    return render(request, "/posts/single-post.html", {
+    return render(request, "blog/single-post.html", {
         "post" : post,
     })

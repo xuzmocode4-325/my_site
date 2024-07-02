@@ -1,0 +1,28 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static "projects/projects.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-nav.css" %}">
+    <link rel="stylesheet" href="{% static "projects/includes/post.css" %}">
+    <link rel="stylesheet" href="{% static "my_site/includes/main-foot.css" %}">
+{% endblock %}
+
+{% block page_title %}
+{% endblock%}
+
+{% block header %}
+    {% include "my_site/includes/header.html"%}
+{% endblock%}
+
+{% block content %}  
+    <h1>Gallery</h1>
+    <h2>All Projects</h2>
+    <section id="all-projects"> 
+        <ul>
+            {% for project in projects %}
+                {% include "my_site/includes/project-article.html" %}
+            {% endfor %}
+         </ul>
+    </section>
+{% endblock %}

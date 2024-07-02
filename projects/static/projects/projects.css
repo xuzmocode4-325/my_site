@@ -15,6 +15,57 @@ h2 {
     text-align: center;
 }
 
-p {
-    margin: 2rem; 
+#featured-project {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 60rem;
+    margin: 3rem auto 2rem auto;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+  
+#featured-project ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+  
+#featured-project li {
+    flex: 1;
+}
+
+#all-projects {
+    margin: 7rem auto;
+    width: 90%;
+    max-width: 60rem;
+}
+  
+#all-projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+#all-projects a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+#all-projects a:hover {
+  color: #884488;
+  transform: scale(1.1)
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
 }
