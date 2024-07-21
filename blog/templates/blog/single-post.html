@@ -21,7 +21,7 @@
         <h2> {{ post.title }} </h2>
         <article>
             <img 
-                src=""
+                src="{{ post.image }}"
                 alt=""
             />
             <address>{{ post.author}}<address>
@@ -33,4 +33,9 @@
     <main>
         {{ post.content | linebreaks }}
     </main>
+    <div id="post_tags">
+        {% for item in tags %}
+            <span>{{ item.caption }}</span>
+        {% endfor %}
+    </div>
 {% endblock %}
