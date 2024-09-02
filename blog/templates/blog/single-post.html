@@ -21,7 +21,7 @@
         <h2> {{ post.title }} </h2>
         <article>
             <img 
-                src="{{ post.image }}"
+                src="{{ post.image.url }}"
                 alt=""
             />
             <address>{{ post.author}}<address>
@@ -30,12 +30,48 @@
             </div>
         </article>
     </section>
+    {% if comment_form.errors %}
+    <div id="alert">
+        <h2>Comment Submission Failed!</h2> 
+        <p>Check the comment form below for more details</p>
+     </div>
+    {% endif %}
     <main>
         {{ post.content | linebreaks }}
     </main>
-    <div id="post_tags">
-        {% for item in tags %}
-            <span>{{ item.caption }}</span>
+    <div id="post-tags">
+        {% for item in post_tags %}
+            <span class="tag">{{ item.caption }}</span>
         {% endfor %}
+    </div>
+
+    <section id="comments">
+        <ul>
+            {% for item in post_comments %}
+                <li>
+                    <h3>{{ item.display_user }}</h3>
+                    <p>{{ item.comment | linebreaks }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <div id="comment-form">
+        <form action="{% url "single-post-page" post.slug %}" method="POST">
+        {% csrf_token %}
+        <h2>Share Your Thoughts</h2>
+        {% for form_field in comment_form %}
+            <div class="form-control 
+                {% if form_field.errors %}
+                invalid
+                {% endif %}
+                "
+            >
+                {{ form_field.label_tag }}
+                {{ form_field }}
+                {{ form_field.errors }}
+            </div>
+        {% endfor %}
+        <button class="form-btn">Submit</button>
+        </form>
     </div>
 {% endblock %}

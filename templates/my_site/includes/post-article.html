@@ -4,7 +4,7 @@
     <article class="post">
         <a href="{% url "single-post-page" post.slug %}">
             <img 
-                scr="{{ post.image }}" 
+                scr="{{ post.image.url }}" 
                 alt="{{ post.alt }}"
             />
             <div class="post__content">

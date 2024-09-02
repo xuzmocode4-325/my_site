@@ -1,6 +1,18 @@
+#alert, 
 #summary {
-  display: flex;
   margin: 8rem auto 3rem auto;
+  
+}
+
+#alert {
+  padding: 1rem;
+  border: 1px solid rgb(185, 8, 8); 
+  background-color: rgb(225, 183, 183); ;
+}
+
+#summary {
+  margin: 8rem auto 3rem auto;
+  display: flex;
   padding: 2rem;
   width: 90%;
   max-width: 90rem;
@@ -13,6 +25,7 @@
 #summary h2 {
   flex: 3;
   font-size: 4.5rem;
+  margin-bottom: 0.25rem;
 }
 
 #summary article {
@@ -38,16 +51,146 @@
   font-weight: bold;
 }
 
+#summary a {
+  text-decoration: none;
+}
+
 #summary time {
   font-weight: bold;
 } 
 
+#read-later {
+  margin: 2rem 0;
+}
+
+#read-later button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  color: #ccc;
+  cursor: pointer;
+}
+
+#read-later button:hover,
+#read-later button:active {
+  background-color: #ccc;
+  color: #390281;
+}
+
+#post-tags {
+  margin: 0 3rem;
+}
+
+.tag {
+  background-color: #ccc;
+  color: #390281;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
 main {
   width: 90%;
+  font-size: 18pt;
   max-width: 90rem;
   margin: 3rem auto;
-  background-color: #ccc;
+  background-color: none;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+#comment-form {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 12px;
+  background-color: none;
+  box-shadow: 0 2px 8px rgba(204, 204, 204, 0.25);
+  padding: 1rem;
+}
+
+#comment-form button:hover,
+#comment-form button:active {
+  background-color: #4f0ba7;
+  border-color: #4f0ba7;
+}
+
+.form-control label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-control input, 
+.form-control textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+.form-btn {
+  font: inherit;
+  background-color: #390281;
+  color: #ccc;
+  border: 1px solid #390281;
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#comment-form {
+  margin: 3rem auto;
+  width: 90%;
+  max-width:  25rem;
+  border-radius:  12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.errorlist {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+  color: rgb(185, 8, 8)
+}
+
+.invalid label {
+  color:rgb(185, 8, 8)
+}
+
+.invalid input, 
+.invalid textarea {
+  border-color: rgb(185, 8, 8);
+  background-color: rgb(225, 183, 183);
+}
+
+#comments {
+  margin: 3rem auto;
+  width: 90%;
+  max-width:  60rem;
+  border-radius:  12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#comments ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+#comments li {
+  flex: 1;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+}
+
+#comments h3 {
+  color: #bbb
 }

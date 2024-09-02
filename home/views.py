@@ -1,23 +1,21 @@
-from django.shortcuts import render
-from django.http import Http404, HttpResponseRedirect
-from django.urls import reverse
-from django.template.loader import render_to_string
-from datetime import date
+from django.views.generic import TemplateView
 from blog.models import Post
+from projects.models import Project
 # Create your views here.
 
+class StartingPageView(TemplateView):
+    template_name = "home/index.html"
 
-def get_date(item):
-    return item["date"]
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["posts"] = Post.objects.all().order_by('-created_at')[:3]
+        context["projects"] = Project.objects.all().order_by('-created_at')[:3]
+        return context
 
-def home(request): 
-    latest_posts = Post.objects.all().order_by("-created_at")[:3]
-    return render(request, "home/index.html",  {
-        "posts": latest_posts
-    })
 
-def about(request):
-    return render(request, "home/about.html")
+class AboutPageView(TemplateView):
+    template_name = "home/about.html"
 
-def contact(request):
-    return render(request, "home/contact.html")
+
+class ContactPageView(TemplateView):
+    template_name = "home/contact.html"
