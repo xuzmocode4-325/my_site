@@ -1,0 +1,45 @@
+#main-navigation {
+    width: 100%;
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+#main-navigation h3 {
+    flex: 20%;
+}
+
+#main-navigation nav {
+    flex: 60%;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+}
+
+#main-navigation nav a, #main-navigation h3 a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 7.5px;
+}
+
+#main-navigation h3 a {
+    font-size: 1.5rem
+}
+
+#main-navigation nav a {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+#main-navigation nav a:hover,
+#main-navigation nav a:active {
+    color: #884488;
+} 
+

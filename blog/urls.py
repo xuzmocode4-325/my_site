@@ -11,4 +11,7 @@ urlpatterns = [
     path("posts/<slug:slug>", 
         views.BlogDetailView.as_view(), 
         name="single-post-page"),
+    path("read-later",
+        views.ReadLaterView.as_view(),
+        name="read-later")
 ]

@@ -40,9 +40,11 @@
                {% endfor %}
             </ul>  
             <a href="{% url "all-posts" %}">
-                <h3>See More Posts</h3>
+                <h3>All Posts</h3>
+            </a> 
+            <a href="{% url "read-later" %}">
+                <h3>Saved Posts</h3>
             </a> 
         </section>
-         
     </div>
 {% endblock %}
